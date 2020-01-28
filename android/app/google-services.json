@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "660379224747",
+    "firebase_url": "https://swdcin.firebaseio.com",
+    "project_id": "swdcin",
+    "storage_bucket": "swdcin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660379224747:android:bbb0913d366028945dc5ee",
+        "android_client_info": {
+          "package_name": "com.mt.swdc_in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660379224747-8a4f99p43ruc4tji96d5g67ep5d7hf38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3jMfHP7OQZQeS8aFmXb2tAJqa1waQEAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660379224747-8a4f99p43ruc4tji96d5g67ep5d7hf38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

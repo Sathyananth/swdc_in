@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:swdc_in/pages/RestRoom.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -47,10 +47,15 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               title: Text('Rest Room'),
               onTap: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                );
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+//                Navigator.pop(context);
               },
             ),
             ListTile(
