@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SecondRoute extends StatelessWidget {
+class AppAboutRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+        title: Text("About"),
       ),
       body: Center(
         child: RaisedButton(
