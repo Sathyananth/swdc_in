@@ -31,10 +31,14 @@ class _HomePageState extends State<RestRoomRoute> {
 
     //_checkEmailVerification();
 
+
+    _database.reference().child("rr").once().then((DataSnapshot snapshot) {
+      print('Data : ${snapshot.value}');
+    });
+
     _todoList = new List();
     _todoQuery = _database
-        .reference()
-        .child("room");
+        .reference().child("rr");
     _onTodoAddedSubscription = _todoQuery.onChildAdded.listen(onEntryAdded);
     _onTodoChangedSubscription =
         _todoQuery.onChildChanged.listen(onEntryChanged);
@@ -73,8 +77,8 @@ class _HomePageState extends State<RestRoomRoute> {
           itemCount: _todoList.length,
           itemBuilder: (BuildContext context, int index) {
             String todoId = _todoList[index].key;
-            String room = _todoList[index].room;
-            bool status = _todoList[index].status;
+            String room = "Room Name";
+            String status = _todoList[index].status;
 
             return Dismissible(
               key: Key(todoId),
@@ -85,13 +89,9 @@ class _HomePageState extends State<RestRoomRoute> {
                   room,
                   style: TextStyle(fontSize: 20.0),
                 ),
-                trailing: Switch(
-                    value: status,
-                    onChanged: null,
-                    activeColor: Colors.blue,
-                    activeTrackColor: Colors.green,
-                    inactiveThumbColor: Colors.white,
-                    inactiveTrackColor: Colors.grey,
+                trailing: Text(
+                  status,
+                  style: TextStyle(fontSize: 20.0),
                     )
                         ,
               ),
