@@ -77,12 +77,12 @@ class _HomePageState extends State<RestRoomRoute> {
           itemCount: _todoList.length,
           itemBuilder: (BuildContext context, int index) {
             String todoId = _todoList[index].key;
-            String room = "Room Name";
+            String room = _todoList[index].name;
             String status = _todoList[index].status;
 
-            return Dismissible(
+            return Card(
               key: Key(todoId),
-              background: Container(color: Colors.red),
+//              background: Container(color: Colors.red),
 
               child: ListTile(
                 title: Text(

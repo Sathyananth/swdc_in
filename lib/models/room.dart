@@ -2,18 +2,19 @@ import 'package:firebase_database/firebase_database.dart';
 
 class Room {
   String key;
-  String room;
+  String name;
   String status;
 
-  Room(this.room, this.status);
+  Room(this.name, this.status);
 
   Room.fromSnapshot(DataSnapshot snapshot) :
         key = snapshot.key,
-//        room = snapshot.value["roomname"],
+        name = snapshot.value["name"],
         status = snapshot.value["status"];
 
   toJson() {
     return {
+      "name": name,
       "status": status,
     };
   }
