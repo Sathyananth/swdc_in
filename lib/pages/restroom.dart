@@ -102,7 +102,7 @@ class _HomePageState extends State<RestRoomRoute> {
           child: Text(
             "Welcome. Your list is empty",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 30.0),
+            style: TextStyle(fontSize: 12.0),
           ));
     }
   }

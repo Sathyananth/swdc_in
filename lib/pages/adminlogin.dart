@@ -82,7 +82,7 @@ class _HomePageState extends State<AdminLoginRoute> {
       }
 
     if (room != null) {
-      _database.reference().child("todo").child(room.key).set(room.toJson());
+      _database.reference().child("rr").child(room.key).set(room.toJson());
     }
   }
 
@@ -117,22 +117,10 @@ class _HomePageState extends State<AdminLoginRoute> {
                     ),
                     trailing: Switch(
                         value: status,
-                        onChanged: (value) {
-                          setState(() {
-//                            status = value;
-                            if(value)
-                              {
-                                statusString = "open";
-                              }
-                            else
-                              {
-                                statusString = "closed";
-                              }
-                            print(value);
-                            print(statusString);
-
-
-                          });
+                        onChanged: (value)
+                        {
+                          status  = value;
+                          _updateTodo(_todoList[index]);
                         },
                         activeColor: Colors.blue,
                         activeTrackColor: Colors.green
